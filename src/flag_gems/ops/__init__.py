@@ -149,7 +149,7 @@ from flag_gems.ops.i0 import i0, i0_out
 from flag_gems.ops.i0_ import i0_
 from flag_gems.ops.index import index
 from flag_gems.ops.index_add import index_add, index_add_
-from flag_gems.ops.index_put import index_put, index_put_
+from flag_gems.ops.index_put import _index_put_impl_, index_put, index_put_
 from flag_gems.ops.index_select import index_select
 from flag_gems.ops.isclose import allclose, isclose
 from flag_gems.ops.isfinite import isfinite
@@ -254,6 +254,7 @@ from flag_gems.ops.replication_pad3d import replication_pad3d
 from flag_gems.ops.resolve_conj import resolve_conj
 from flag_gems.ops.resolve_neg import resolve_neg
 from flag_gems.ops.rms_norm import rms_norm, rms_norm_backward, rms_norm_forward
+from flag_gems.ops.roll import roll
 from flag_gems.ops.round import round, round_, round_out
 from flag_gems.ops.rrelu_with_noise_backward import rrelu_with_noise_backward
 from flag_gems.ops.rsqrt import rsqrt, rsqrt_
@@ -330,6 +331,7 @@ __all__ = [
     "_assert_async",
     "_conv_depthwise2d",
     "_functional_sym_constrain_range_for_size",
+    "_index_put_impl_",
     "_is_all_true",
     "_safe_softmax",
     "_unique2",
@@ -638,6 +640,7 @@ __all__ = [
     "rms_norm",
     "rms_norm_backward",
     "rms_norm_forward",
+    "roll",
     "round",
     "round_",
     "round_out",
